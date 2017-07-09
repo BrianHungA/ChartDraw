@@ -10,7 +10,7 @@
 	<form name="myForm" action="ChartDrawing_line.jsp">
 		UserName:<input type="text" name="userName"/>
 		<br>
-		FileName:<input type="text" name="chartNames"/>
+		FileName:<input type="text" name="csvName"/>
 		<br>
 		<input type="submit" name="submitButton" value="submit"/>		
 	</form>

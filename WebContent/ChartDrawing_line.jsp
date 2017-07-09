@@ -76,23 +76,28 @@
     	    }
     	});
 
-    	//index.jsp TEST
+    	//index.jsp == Data Access URL TEST ==
     	alert("123");
     	<% 
     		String reqUserName = request.getParameter("userName");
-    		String reqChartName = request.getParameter("chartNames");
+    		String reqCsvName = request.getParameter("csvName");
     	%>
     	alert("456");
-    	var userName1 = "<%=reqUserName%>";
-    	var chartName1 = "<%=reqChartName%>";
-    	alert("userName = " + userName1 + ";ChartName = " + chartName1);
+    	var userName = "<%=reqUserName%>";
+    	var csvName = "<%=reqCsvName%>";
+    	
+		var hiveURL = "192.168.0.119";
+		var userURL = hiveURL + "/user/" + userName + "/" + csvName + ".csv" ;
+		
+		alert("userName = " + userName + "; ChartName = " + csvName + "; userURL = " + userURL);
+    	
     	//  ============CSSSSSSV TEST==============
 		var dataLabel = [];
 		var dataPoints = [];
 //		var urlcsv  = "Data/gpssensor.csv";
-		var urlcsv1 = "Data/daja.csv";
+		var urlcsv1 = "Data/" + "daj" + "a.csv";
 //		var urlcsv0 = "Data/dataPoints.csv"
-		var urlcsvGit = "https://raw.githubusercontent.com/BrianHungA/ChartDraw/master/WebContent/Data/daja.csv";
+//		var urlcsvGit = "https://raw.githubusercontent.com/BrianHungA/ChartDraw/master/WebContent/Data/daja.csv";
         $.ajax({
 			url:urlcsv1,
 			dataType:"text",

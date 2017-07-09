@@ -47,7 +47,7 @@
                 type: 'linear',
                 position: 'bottom'
             }]
-        */}
+        }*/
     };
 
 
